@@ -50,10 +50,10 @@
                         <form role="form" action="" method="POST">
 
 
-                            <label><input type="checkbox" id="l" name="l" checked >Lowercase letters</label><br>
-                            <label><input type="checkbox"  name="u" checked>Uppercase letters</label><br>
-                            <label><input type="checkbox"  name="d" checked>Numbers</label><br>
-                            <label><input type="checkbox"  name="s" checked>Special characters</label><br>
+                            <label><input type="checkbox" name="l" checked >Lowercase letters</label><br>
+                            <label><input type="checkbox" name="u" checked>Uppercase letters</label><br>
+                            <label><input type="checkbox" name="d" checked>Numbers</label><br>
+                            <label><input type="checkbox" name="s" checked>Special characters</label><br>
 
                             <label>Length: <input type="number" name="length" value="20" style="margin-top: 10p;width: 60px"></label><br>
                             <button class="btn btn-success " type="submit" name="login" style="margin-top: 5px" >Generate</button>
