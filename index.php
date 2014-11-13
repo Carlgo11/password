@@ -15,18 +15,21 @@
     <body>
         <h1 style="margin-left: 50px">Need a Carl Password?</h1>
         <?php
-
         function generateStrongPassword() {
             $length = $_POST['length'];
             $sets = array();
-            if (isset($_POST['l']))
+            if (isset($_POST['l'])) {
                 $sets[] = 'abcdefghjkmnpqrstuvwxyz';
-            if (isset($_POST['u']))
+            }
+            if (isset($_POST['u'])) {
                 $sets[] = 'ABCDEFGHJKMNPQRSTUVWXYZ';
-            if (isset($_POST['d']))
+            }
+            if (isset($_POST['d'])) {
                 $sets[] = '123456789';
-            if (isset($_POST['s']))
-                $sets[] = '!@#$%&*?{[()]}|<>^\'\\/~-_^+.,:;=';
+            }
+            if (isset($_POST['s'])) {
+                $sets[] = '!@#$%&*?{[()]}|<>^\'\\/~-_^+.,:;= ';
+            }
 
             $all = '';
             $password = '';
@@ -36,8 +39,9 @@
             }
 
             $all = str_split($all);
-            for ($i = 0; $i < $length - count($sets); $i++)
+            for ($i = 0; $i < $length - count($sets); $i++) {
                 $password .= $all[array_rand($all)];
+            }
 
             $password = str_shuffle($password);
             return $password;
@@ -48,7 +52,7 @@
                 <div class="cover-container">
                     <div style="float: left">
                         <form role="form" action="" method="POST">
-                            
+
                             <label><input type="checkbox" name="l" checked>Lowercase letters</label><br>
                             <label><input type="checkbox" name="u" checked>Uppercase letters</label><br>
                             <label><input type="checkbox" name="d" checked>Numbers</label><br>
