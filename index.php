@@ -26,7 +26,7 @@
             if (isset($_POST['d']))
                 $sets[] = '123456789';
             if (isset($_POST['s']))
-                $sets[] = '!@#$%&*?{[]}|<>^\'\\/~-_^';
+                $sets[] = '!@#$%&*?{[()]}|<>^\'\\/~-_^+.,:;=';
 
             $all = '';
             $password = '';
@@ -48,9 +48,8 @@
                 <div class="cover-container">
                     <div style="float: left">
                         <form role="form" action="" method="POST">
-
-
-                            <label><input type="checkbox" name="l" checked >Lowercase letters</label><br>
+                            
+                            <label><input type="checkbox" name="l" checked>Lowercase letters</label><br>
                             <label><input type="checkbox" name="u" checked>Uppercase letters</label><br>
                             <label><input type="checkbox" name="d" checked>Numbers</label><br>
                             <label><input type="checkbox" name="s" checked>Special characters</label><br>
