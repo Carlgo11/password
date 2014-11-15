@@ -13,8 +13,10 @@
         <title>Carl Passwords</title>
     </head>
     <body>
+        <a href="https://github.com/Carlgo11/password"><img class="github" style="float:right;position: absolute;top:0;right: 0;" src="./resources/media/GitHub-Mark-64px.png" alt="github"></a>
         <h1 style="margin-left: 50px">Need a Carl Password?</h1>
         <?php
+
         function generateStrongPassword() {
             $length = $_POST['length'];
             $sets = array();
@@ -47,6 +49,7 @@
             return $password;
         }
         ?>
+        
         <div class="site-wrapper">
             <div class="site-wrapper-inner">
                 <div class="cover-container">
@@ -67,6 +70,7 @@
                         <input type="text" value="<?php echo generateStrongPassword() ?>" style="width: max-content" >
                     </div>
                 </div>
+                <div id='footer' style='position: fixed; bottom: 0px;margin-left: auto;margin-right: auto;text-align: center;width: 100%'>For a better security turn on <a href="https://twofactorauth.org/">TFA</a> when available!<div style="margin-top: 40px">&copy; <?php echo date("Y"); ?> <a href="https://carlgo11.com/">Carlgo11</a></div></div>
             </div>
         </div>
     </body>
