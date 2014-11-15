@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
+        <link rel="icon" type="image/vnd.microsoft.icon"  href="./resources/media/32.ico"/>
         <link href="./css/bootstrap.min.css" rel="stylesheet">
         <link href="./css/cover.css" rel="stylesheet">
         <script src="./js/bootstrap.file-input.js"></script>
