@@ -59,12 +59,16 @@
         }
 
         function value($id) {
+            if(isset($_POST['submit'])){
             if (isset($_POST[$id])) {
                 return "checked";
             } else {
                 return "";
             }
             echo $_POST[$id];
+            }else{
+                return "checked";
+            }
         }
         ?>
 
@@ -80,15 +84,18 @@
                             <label><input type="checkbox" name="s" <?php echo value('s'); ?>>Special characters</label><br>
                             <label><input type="checkbox" name="sp" <?php echo value('sp'); ?>>Spaces</label><br>
 
-                            <label>Length: <input type="number" name="length" id="length" value="
-                                <?php
+                            <label>Length: <input type="number" name="length" id="length" value="<?php
+                                 if(isset($_POST['submit'])){
                                 if (isset($_POST['length'])) {
                                     echo $_POST['length'];
                                 } else {
                                     echo "20";
                                 }
+                                 }else{
+                                     echo "20";
+                                 }
                                 ?>" style="margin-top: 10p;width: 60px"></label><br>
-                            <button class="btn btn-success " type="submit" name="login" style="margin-top: 5px" onclick="generateStrongPassword()">Generate</button>
+                            <button class="btn btn-success " type="submit" name="submit" style="margin-top: 5px" onclick="generateStrongPassword()">Generate</button>
                         </form>
                     </div>
                     <div style="float: end;margin-left: 200px">
