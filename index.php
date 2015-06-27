@@ -9,7 +9,7 @@
         <meta name="author" content="">
         <link rel="icon" type="image/vnd.microsoft.icon"  href="./resources/media/32.ico"/>
         <link href="./css/bootstrap.min.css" rel="stylesheet">
-        <link href="./css/cover.css" rel="stylesheet">
+        
         <script src="./js/bootstrap.file-input.js"></script>
         <title>Carl Passwords</title>
     </head>
@@ -72,10 +72,9 @@
         }
         ?>
 
-        <div class="site-wrapper">
-            <div class="site-wrapper-inner">
-                <div class="cover-container">
-                    <div style="float: left">
+            <div class="vertical-center">
+                <div class="container" >
+                    <div style="float: left; text-align: left">
                         <form role="form" action="" method="POST">
 
                             <label><input type="checkbox" name="l" <?php echo value('l'); ?>>Lowercase letters</label><br>
@@ -98,13 +97,13 @@
                             <button class="btn btn-success " type="submit" name="submit" style="margin-top: 5px" onclick="generateStrongPassword()">Generate</button>
                         </form>
                     </div>
-                    <div style="float: end;margin-left: 200px">
+                    <div style="margin-left: 200px">
                         <p>New password:</p>
-                        <input type="text" value="<?php echo generateStrongPassword() ?>" style="width: max-content" >
+                        <input type="text" class="input-sm" value="<?php echo generateStrongPassword() ?>" style="width: 30em" >
                     </div>
                 </div>
-                <div id='footer' style='position: fixed; bottom: 0px;margin-left: auto;margin-right: auto;text-align: center;width: 100%'>For a better security turn on <a href="https://twofactorauth.org/">TFA</a> when available!<div style="margin-top: 40px">&copy; <?php echo date("Y"); ?> <a href="https://carlgo11.com/">Carlgo11</a></div></div>
+                
             </div>
-        </div>
+        <div id='footer' style='position: absolute; bottom: 0px;margin-left: auto;margin-right: auto;text-align: center;width: 100%'>For a better security turn on <a href="https://twofactorauth.org/">TFA</a> when available!<div style="margin-top: 40px">&copy; <?php echo date("Y"); ?> <a href="https://carlgo11.com/">Carlgo11</a></div></div>
     </body>
 </html>
