@@ -19,7 +19,12 @@
         <?php
 
         function generateStrongPassword() {
-            $length = $_POST['length'];
+
+            if (isset($_POST['length'])) {
+                $length = $_POST['length'];
+            } else {
+                $length = 20;
+            }
             $sets = array();
             if (isset($_POST['l'])) {
                 $sets[] = 'abcdefghjkmnpqrstuvwxyz';
@@ -31,7 +36,10 @@
                 $sets[] = '123456789';
             }
             if (isset($_POST['s'])) {
-                $sets[] = '!@#$%&*?{[()]}|<>^\'\\/~-_^+.,:;= ';
+                $sets[] = '!@#$%&*?{[()]}|<>^\'\\/~-_^+.,:;=~';
+            }
+            if (isset($_POST['sp'])) {
+                $sets[] = ' ';
             }
 
             $all = '';
@@ -49,21 +57,38 @@
             $password = str_shuffle($password);
             return $password;
         }
+
+        function value($id) {
+            if (isset($_POST[$id])) {
+                return "checked";
+            } else {
+                return "";
+            }
+            echo $_POST[$id];
+        }
         ?>
-        
+
         <div class="site-wrapper">
             <div class="site-wrapper-inner">
                 <div class="cover-container">
                     <div style="float: left">
                         <form role="form" action="" method="POST">
 
-                            <label><input type="checkbox" name="l" checked>Lowercase letters</label><br>
-                            <label><input type="checkbox" name="u" checked>Uppercase letters</label><br>
-                            <label><input type="checkbox" name="d" checked>Numbers</label><br>
-                            <label><input type="checkbox" name="s" checked>Special characters</label><br>
+                            <label><input type="checkbox" name="l" <?php echo value('l'); ?>>Lowercase letters</label><br>
+                            <label><input type="checkbox" name="u" <?php echo value('u'); ?>>Uppercase letters</label><br>
+                            <label><input type="checkbox" name="d" <?php echo value('d'); ?>>Numbers</label><br>
+                            <label><input type="checkbox" name="s" <?php echo value('s'); ?>>Special characters</label><br>
+                            <label><input type="checkbox" name="sp" <?php echo value('sp'); ?>>Spaces</label><br>
 
-                            <label>Length: <input type="number" name="length" value="20" style="margin-top: 10p;width: 60px"></label><br>
-                            <button class="btn btn-success " type="submit" name="login" style="margin-top: 5px" >Generate</button>
+                            <label>Length: <input type="number" name="length" id="length" value="
+                                <?php
+                                if (isset($_POST['length'])) {
+                                    echo $_POST['length'];
+                                } else {
+                                    echo "20";
+                                }
+                                ?>" style="margin-top: 10p;width: 60px"></label><br>
+                            <button class="btn btn-success " type="submit" name="login" style="margin-top: 5px" onclick="generateStrongPassword()">Generate</button>
                         </form>
                     </div>
                     <div style="float: end;margin-left: 200px">
