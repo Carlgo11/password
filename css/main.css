@@ -1,0 +1,29 @@
+.footer {
+    position: absolute;
+    bottom: 0px;margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.options {
+    float: left;
+    text-align: left;
+}
+
+.github {
+    float:right;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.title {
+    margin-left: 50px;
+}
+
+.bad-password-alert {
+    width: 40em;
+    margin-left: 90px;
+    margin-top: 15px;
+}
