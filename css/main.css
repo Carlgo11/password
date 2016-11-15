@@ -1,29 +1,45 @@
 .footer {
-    position: absolute;
-    bottom: 0px;margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: 100%;
+  position: absolute;
+  bottom: 0px;margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer2 {
+  margin-top: 30px;
 }
 
 .options {
-    float: left;
-    text-align: left;
+  float: left;
+  text-align: left;
 }
 
 .github {
-    float:right;
-    position: absolute;
-    top:0;
-    right: 0;
+  float:right;
+  position: absolute;
+  top:0;
+  right: 0;
 }
 
 .title {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
-.bad-password-alert {
-    width: 40em;
-    margin-left: 90px;
-    margin-top: 15px;
+.length {
+  margin-top: 10px;
+  width: 60px
+}
+
+.password {
+  width: 30em;
+}
+
+.password-container {
+  margin-left: 200px;
+}
+
+.generate {
+  margin-top: 5px;
 }

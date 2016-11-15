@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Generate good passwords">
+    <meta name="author" content="Carlgo11">
+    <link rel="icon" type="image/vnd.microsoft.icon"  href="./resources/media/32.ico"/>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <title>Carl Passwords</title>
+  </head>
+  <body>
+    <a href="https://github.com/Carlgo11/password"><img class="github" src="./resources/media/GitHub-Mark-64px.png" alt="github"></a>
+    <h1 class="title">Need a Carl Password?</h1>
+    <div class="vertical-center">
+      <div class="container" >
+        <div class="options">
+          <label><input type="checkbox" id="l" checked="">Lowercase letters</label><br>
+          <label><input type="checkbox" id="u" checked="">Uppercase letters</label><br>
+          <label><input type="checkbox" id="d" checked="">Numbers</label><br>
+          <label><input type="checkbox" id="s" checked="">Special characters</label><br>
+          <label><input type="checkbox" id="un" checked="">Unicode characters</label><br>
+          <label><input type="checkbox" id="sp" checked="">Spaces</label><br>
+          <label>Length: <input type="number" id="length" class="length" value="20"></label><br>
+          <button class="btn btn-success generate" id="generate">Generate</button>
+        </div>
+        <div class="password-container">
+          <p>New password:</p>
+          <input type="text" class="input-sm password" id="password"><br>          
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="footer">Don't forget to turn on <a href="https://twofactorauth.org/">2FA</a> when available!<div class="footer2">Created by <a href="https://carlgo11.com/">Carlgo11</a></div></div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
