@@ -5,9 +5,8 @@ function getRandomInt(min, max) {
 }
 
 function genPassword() {
-    var passLength = document.getElementById('length').value;
-    var pass="";
-    for (i = 0; i < passLength; i++) {
+    var pass = "";
+    for (i = 0; i < document.getElementById('length').value; i++) {
         var a = [];
 
         if (document.getElementById('d').checked) {
@@ -34,13 +33,11 @@ function genPassword() {
             a.push([32, 32]);
         }
 
-        var length = a.length;
-        var type = getRandomInt(0, length - 1);
-        console.log("a: "+(a[type][0]));
+        var type = getRandomInt(0, a.length - 1);
         var min = a[type][0];
         var max = a[type][1];
         var randUnicode = String.fromCharCode(getRandomInt(min, max));
-        pass+=randUnicode;
+        pass += randUnicode;
     }
     document.getElementById('password').value = pass.toString();
 }
