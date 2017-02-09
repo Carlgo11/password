@@ -41,3 +41,34 @@ function genPassword() {
     }
     document.getElementById('password').value = pass.toString();
 }
+
+$('#password-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+});
+
+$('#generate').click(function () {
+    $('#new-password').show();
+});
+
+function setTooltip() {
+    $('#password-button').tooltip('show');
+}
+
+function hideTooltip() {
+    setTimeout(function () {
+        $('#password-button').tooltip('hide');
+    }, 2000);
+}
+
+var clipboard = new Clipboard('.btn');
+
+clipboard.on('success', function (e) {
+    e.clearSelection();
+    setTooltip();
+    hideTooltip();
+});
+
+clipboard.on('error', function (e) {
+    console.log('error copying to clipboard.');
+});

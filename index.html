@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="./img/favicon_32px.png" sizes="32x32">
     <link rel="icon" type="image/png" href="./img/favicon_16px.png" sizes="16x16">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/main.min.css" rel="stylesheet">
     <link href="./css/corner.css" rel="stylesheet">
     <title>Carl Passwords</title>
   </head>
@@ -28,15 +28,23 @@
           <label><input type="checkbox" id="un" checked="">Unicode characters</label><br>
           <label><input type="checkbox" id="sp" checked="">Spaces</label><br>
           <label>Length: <input type="number" id="length" class="length" value="20"></label><br>
-          <button class="btn btn-success generate" id="generate">Generate</button>
+          <button class="btn btn-success generate" id="generate" onclick="showPassword()">Generate</button>
         </div>
-        <div class="password-container">
-          <p>New password:</p>
-          <input type="text" class="input-sm password" id="password"><br>
+        <div class="col-lg-8" id="new-password" style="display: none">
+          <label class="lead" for="password">New password:</label>
+          <div class="input-group password-container">
+            <input type="text" class="form-control" id="password"><br>
+            <span class="input-group-btn">
+              <button  id="password-button" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Copied!" data-clipboard-target="#password"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span><span class="sr-only" aria-hidden="true">Copy</span></button>
+            </span>
+          </div>
         </div>
       </div>
     </div>
     <div id="footer" class="footer">Don't forget to turn on <a href="https://twofactorauth.org/">2FA</a> when available!<div class="footer2">Created by <a href="https://carlgo11.com/">Carlgo11</a></div></div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/clipboard.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
