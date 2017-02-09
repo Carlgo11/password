@@ -48,14 +48,11 @@ $('#password-button').tooltip({
 });
 
 $('#generate').click(function () {
-    $('#new-password').show();
+    $('#new-password').fadeIn();
 });
 
-function setTooltip() {
+function showTooltip() {
     $('#password-button').tooltip('show');
-}
-
-function hideTooltip() {
     setTimeout(function () {
         $('#password-button').tooltip('hide');
     }, 2000);
@@ -65,8 +62,7 @@ var clipboard = new Clipboard('.btn');
 
 clipboard.on('success', function (e) {
     e.clearSelection();
-    setTooltip();
-    hideTooltip();
+    showTooltip();
 });
 
 clipboard.on('error', function (e) {
