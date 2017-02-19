@@ -1,6 +1,7 @@
 .footer {
   position: absolute;
-  bottom: 0px;margin-left: auto;
+  bottom: 0px;
+  margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
   text-align: center;
@@ -17,9 +18,9 @@
 }
 
 .github {
-  float:right;
+  float: right;
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
 }
 
@@ -29,7 +30,7 @@
 
 .length {
   margin-top: 10px;
-  width: 60px
+  width: 60px;
 }
 
 .password {
@@ -44,35 +45,42 @@
   margin-top: 5px;
 }
 
-.container{
-  width:1025px;
+.container {
+  width: 1025px;
 }
 
 .vertical-center {
-  height:100%;
-  width:100%;
-  text-align: center;  /* align the inline(-block) elements horizontally */
-  font: 0/0 a;         /* remove the gap between inline(-block) elements */
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font: 0/0a;
 }
 
-.vertical-center:before {    /* create a full-height inline block pseudo=element */
-  content: ' ';
+.vertical-center:before {
+  content: '';
   display: inline-block;
-  vertical-align: middle;  /* vertical alignment of the inline element */
+  vertical-align: middle;
   height: 100%;
 }
 
-.vertical-center > .container {
+.vertical-center>.container {
   max-width: 100%;
   margin-top: 10%;
   display: inline-block;
-  vertical-align: middle;  /* vertical alignment of the inline element */
-  font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;        /* <-- reset the font property */
+  vertical-align: middle;
+  font: 16px/1"HelveticaNeue",Helvetica,Arial,sans-serif;
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .vertical-center:before {
-    /* height: auto; */
     display: none;
   }
+}
+
+body {
+  display: none;
+}
+
+#new-password {
+  display: none;
 }
