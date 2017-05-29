@@ -13,6 +13,7 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/main.min.css" rel="stylesheet">
     <link href="./css/corner.css" rel="stylesheet">
+    <link href="./css/loading.min.css" rel="stylesheet">
     <title>Carl Passwords</title>
   </head>
   <body>
@@ -20,7 +21,7 @@
     <h1 class="title">Need a Carl Password?</h1>
     <div class="vertical-center">
       <div class="container" id="container">
-        <div class="options">
+        <div class="options col-sm-3">
           <label><input type="checkbox" id="l" checked="">Lowercase letters</label><br>
           <label><input type="checkbox" id="u" checked="">Uppercase letters</label><br>
           <label><input type="checkbox" id="d" checked="">Numbers</label><br>
@@ -30,9 +31,9 @@
           <label>Length: <input type="number" id="length" class="length" value="20"></label><br>
           <button class="btn btn-success generate" id="generate" onclick="showPassword()">Generate</button>
         </div>
-        <div class="col-lg-8" id="new-password">
+        <div class="password-container col-sm-9" id="new-password">
           <label class="lead" for="password">New password:</label>
-          <div class="input-group password-container">
+          <div class="input-group col-sm-8">
             <input type="text" class="form-control" id="password"><br>
             <span class="input-group-btn">
               <button  id="password-button" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Copied!" data-clipboard-target="#password"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span><span class="sr-only" aria-hidden="true">Copy</span></button>
@@ -46,5 +47,6 @@
     <script src="./js/clipboard.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/jquery.loading.min.js"></script>
   </body>
 </html>

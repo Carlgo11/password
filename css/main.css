@@ -38,7 +38,7 @@
 }
 
 .password-container {
-  margin-left: 200px;
+ float: right;
 }
 
 .generate {

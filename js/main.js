@@ -71,6 +71,16 @@ clipboard.on('success', function (e) {
 clipboard.on('error', function (e) {
   console.log('error copying to clipboard.');
 });
-$(document).ready(function () {
-  $('body').fadeIn();
+$(window).load(function() {
+    $('body').fadeIn();
+    $.showLoading({
+	  callback: function() {$.hideLoading();}
+	});
+
+});
+$(document).on("pageload",function(){
+    $.showLoading({
+        name: 'jump-pulse'
+    });
+    console.log("begin");
 });
