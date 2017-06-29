@@ -31,22 +31,22 @@
           <label>Length: <input type="number" id="length" class="length" value="20"></label><br>
           <button class="btn btn-success generate" id="generate" onclick="showPassword()">Generate</button>
         </div>
-        <div class="password-container col-sm-9" id="new-password">
+        <div class="password-container col-xs-12 col-sm-7" id="new-password">
           <label class="lead" for="password">New password:</label>
-          <div class="input-group col-sm-8">
+          <div class="input-group">
             <input type="text" class="form-control" id="password"><br>
             <span class="input-group-btn">
-              <button  id="password-button" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Copied!" data-clipboard-target="#password"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span><span class="sr-only" aria-hidden="true">Copy</span></button>
+              <button id="password-button" class="btn btn-success" data-clipboard-target="#password"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span><p class="sr-only">Copy</p></button>
             </span>
           </div>
         </div>
       </div>
     </div>
-    <div id="footer" class="footer">Don't forget to turn on <a href="https://twofactorauth.org/">2FA</a> when available!<div class="footer2">Created by <a href="https://carlgo11.com/">Carlgo11</a></div></div>
+    <div id="footer" class="footer hidden-xs">Don't forget to turn on <a href="https://twofactorauth.org/">2FA</a> when available!<div class="footer2">Created by <a href="https://carlgo11.com/">Carlgo11</a></div></div>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/clipboard.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/main.js"></script>
     <script src="./js/jquery.loading.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
