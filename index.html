@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,25 +28,23 @@
           <input type="checkbox" id="un" checked=""><label for="un">Unicode characters</label><br>
           <input type="checkbox" id="sp" checked=""><label for="sp">Spaces</label><br>
           <label for="length">Length: </label><input type="number" id="length" class="length" value="20" min="1"><br>
-          <button class="btn btn-success generate" id="generate" onclick="showPassword()" autofocus="">Generate</button>
+          <button class="btn btn-success generate" id="generate" autofocus="">Generate</button>
         </div>
-
         <div class="password-container col-xs-12 col-sm-7" id="new-password">
           <label class="lead" for="password">New password:</label>
           <div class="input-group">
             <input type="text" class="form-control" id="password"><br>
-            <span class="input-group-btn">
-              <button id="password-button" class="btn btn-success" data-clipboard-target="#password"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span><p class="sr-only">Copy</p></button>
+            <span class="input-group-btn" id="password-button-span">
+              <button class="btn btn-success ng-scope" type="button" id="password-button" data-clipboard-target="#password"><span class="glyphicon glyphicon-copy"><span class="sr-only">Copy</span></span></button>
             </span>
           </div>
         </div>
-
     </div>
     <div id="footer" class="footer hidden-xs">Don't forget to turn on <a href="https://twofactorauth.org/">2FA</a> when available!<div class="footer2">Created by <a href="https://carlgo11.com/">Carlgo11</a></div></div>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/clipboard.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.loading.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.min.js"></script>
   </body>
 </html>
