@@ -61,6 +61,7 @@
   display: inline-block;
   vertical-align: middle;
   height: 100%;
+  margin-top: 40px;
 }
 
 .vertical-center>.container {
