@@ -4,12 +4,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Generate strong passwords easily">
+    <meta name="description" content="Generate a Carl Password.">
     <meta name="author" content="Carlgo11">
-    <link rel="icon" type="image/png" href="./img/favicon_256px.png" sizes="256x256">
-    <link rel="icon" type="image/png" href="./img/favicon_128px.png" sizes="128x128">
-    <link rel="icon" type="image/png" href="./img/favicon_32px.png" sizes="32x32">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#5CB85C">
+    <meta name="apple-mobile-web-app-title" content="Carl Passwords">
     <link rel="icon" type="image/png" href="./img/favicon_16px.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./img/favicon_32px.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./img/favicon_128px.png" sizes="128x128">
+    <link rel="icon" type="image/png" href="./img/favicon_144px.png" sizes="144x144">
+    <link rel="icon" type="image/png" href="./img/favicon_256px.png" sizes="256x256">
+    <link rel="apple-touch-icon" href="./img/favicon_16px.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="./img/favicon_32px.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="./img/favicon_128px.png" sizes="128x128">
+    <link rel="apple-touch-icon" href="./img/favicon_144px.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="./img/favicon_16px.png" sizes="256x256">
+    <link rel="manifest" href="manifest.json"/>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/bootstrap-3-right-offset.css" rel="stylesheet">
     <link href="./css/main.min.css" rel="stylesheet">
@@ -54,8 +65,14 @@
     <div id="footer" class="footer hidden-xs">Don't forget to turn on <a href="https://twofactorauth.org/">2FA</a> when available!<div class="footer2">Created by <a href="https://carlgo11.com/">Carlgo11</a></div></div>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/clipboard.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/jquery.loading.min.js"></script>
-    <script src="./js/main.min.js"></script>
-  </body>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.loading.min.js"></script>
+<script src="./js/main.min.js"></script>
+<script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('/service-worker.js');
+}
+</script>
+</body
 </html>

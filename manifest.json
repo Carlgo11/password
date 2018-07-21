@@ -1,0 +1,30 @@
+{
+  "name": "Carl passwords",
+  "short_name": "Carl Passwords",
+  "description": "Generate a Carl Password.",
+  "version": "0.1",
+  "display": "standalone",
+  "theme_color": "#5CB85C",
+  "manifest_version": 2,
+  "icons": [{
+    "src": "./img/favicon_16px.png",
+    "size": "16x16",
+    "type": "image/png"
+  }, {
+    "src": "./img/favicon_32px.png",
+    "size": "32x32",
+    "type": "image/png"
+  }, {
+    "src": "./img/favicon_128px.png",
+    "size": "128x128",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon_144px.png",
+    "size": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "./img/favicon_256px.png",
+    "size": "256x256",
+    "type": "image/png"
+  }]
+}
