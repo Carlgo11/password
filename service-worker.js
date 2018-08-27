@@ -32,7 +32,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CURRENT_CACHES.assets).then(function(cache) {
       return cache.addAll(
-        ['/',
+        ['.',
           'css/bootstrap-3-right-offset.css',
           'css/bootstrap.min.css',
           'css/corner.css',
@@ -47,7 +47,6 @@ self.addEventListener('install', event => {
           'js/jquery.loading.min.js',
           'js/jquery.min.js',
           'js/main.min.js',
-          'background.js',
           'index.html'
         ]
       );
