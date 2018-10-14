@@ -1,21 +1,27 @@
-$(window).load(function() {
+$(window).load(function () {
   $('body').fadeIn();
   $.showLoading({
-    callback: function() {
+    callback: function () {
       $.hideLoading();
     }
   });
 });
 
-$(document).on("pageload", function() {
+$(document).on('pageload', function () {
   $.showLoading({
     name: 'jump-pulse'
   });
 });
 
-$(document).ready(function() {
-  $('#generate').click(function(){
+$(document).ready(function () {
+  $('#generate').click(function () {
     genPassword();
+  });
+
+  $('#length').keypress(function (e) {
+    if (e.keyCode === 13) {
+      genPassword();
+    }
   });
 
   function getRandomInt(min, max) {
@@ -65,8 +71,7 @@ $(document).ready(function() {
       var type = getRandomInt(0, a.length - 1);
       var min = a[type][0];
       var max = a[type][1];
-      var randUnicode = String.fromCharCode(getRandomInt(min, max));
-      pass += randUnicode;
+      pass += String.fromCharCode(getRandomInt(min, max));
     }
     $('#password').val(pass.toString());
     $('#new-password').fadeIn();
@@ -79,21 +84,21 @@ $(document).ready(function() {
   }
 
   function hideTooltip() {
-    setTimeout(function() {
+    setTimeout(function () {
       $('#password-button-span').tooltip('hide');
     }, 2000);
   }
 
   var clipboard = new Clipboard('#password-button');
 
-  clipboard.on('success', function(e) {
+  clipboard.on('success', function (e) {
     e.clearSelection();
-    setTooltip("Copied!");
+    setTooltip('Copied!');
     hideTooltip();
   });
 
-  clipboard.on('error', function(e) {
-    setTooltip("Error");
-    console.log('error copying to clipboard.');
+  clipboard.on('error', function (e) {
+    setTooltip('Error');
+    console.error('Error copying to clipboard.' + e);
   });
 });
