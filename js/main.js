@@ -19,6 +19,7 @@ $(document).ready(function () {
   });
 
   $('#length').keypress(function (e) {
+    // keyCode 13 = 'Enter'
     if (e.keyCode === 13) {
       genPassword();
     }
