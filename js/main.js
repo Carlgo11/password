@@ -13,7 +13,11 @@ $(document).on('pageload', function () {
   });
 });
 
+
 $(document).ready(function () {
+	if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
   $('#generate').click(function () {
     genPassword();
   });
@@ -103,3 +107,4 @@ $(document).ready(function () {
     console.error('Error copying to clipboard.' + e);
   });
 });
+
