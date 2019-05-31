@@ -41,11 +41,7 @@ self.addEventListener('install', event => {
                     'img/favicon_128px.png',
                     'img/favicon_256px.png',
                     'img/favicon_512px.png',
-                    'js/bootstrap.min.js',
-                    'js/clipboard.min.js',
-                    'js/jquery.loading.min.js',
-                    'js/jquery.min.js',
-                    'js/main.min.js',
+                    'js/main.js',
                     'index.html'
                 ]
             );

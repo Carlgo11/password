@@ -1,22 +1,19 @@
 $(window).on('load', function () {
     $('body').fadeIn();
-    $.showLoading({
-        callback: function () {
-            $.hideLoading();
-        }
-    });
 });
-
+/*
 $(document).on('pageload', function () {
     $.showLoading({
         name: 'jump-pulse'
     });
-});
+});*/
 
 $(document).ready(function () {
+
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js');
     }
+
     $('#generate').click(function () {
         genPassword();
     });
@@ -25,37 +22,11 @@ $(document).ready(function () {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    /* function getEmojis() {
-         fetch('//rawgit.com/iamcal/emoji-data/master/emoji.json')
-             .then(r => r.json())
-             .then(list => {
-                 let map = list.reduce((acc, {short_name: n, short_names, unified}) => {
-                     unified = unified.replace(/(^|-)([a-z0-9]+)/gi, (s, b, cp) => (
-                         String.fromCodePoint()
-                     ));
-                     console.log(unified);
-
-                     if (n && !n.match(/^(flag|skin)\-\w+$/)) {
-                         acc[n] = unified;
-                         for (let i = short_names.length; i--;) {
-                             if (short_names[i] !== n) {
-                                 acc[short_names[i]] = unified;
-                             }
-                         }
-                     }
-                     return acc;
-                 }, {});
-
- // console.log(JSON.stringify(map,null,'  '));
-                 return JSON.stringify(map, null, '  ');
-             })
-     }*/
-
     function genPassword() {
-        let pass = '';
+        let pass;
 
         for (i = 0; i < document.getElementById('length').value; i++) {
-            var a = [];
+            let a = [];
             if (document.getElementById('d').checked) {
                 a.push([
                     48,
@@ -87,10 +58,6 @@ $(document).ready(function () {
                     42240, 42539
                 ]);
             }
-            /*if (document.getElementById('em').checked) {
-                var emojis = getEmojis();
-                a.push([10175, 10175]);
-            }*/
             if (document.getElementById('s').checked) {
                 a.push([
                     33, 47
@@ -118,7 +85,7 @@ $(document).ready(function () {
         }
 
         $('#password').val(pass.toString());
-        $('#new-password').fadeIn();
+        $('#password-div').fadeIn();
     }
 
     function setTooltip(message) {

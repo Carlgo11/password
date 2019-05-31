@@ -1,4 +1,5 @@
 body {
+    /* Hide all elements before everything is ready */
     display: none;
 }
 
@@ -33,18 +34,6 @@ body {
     margin-right: 2vw;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
-    text-align: center;
-    width: 100%;
-}
-
-.footer2 {
-    margin-top: 30px;
-}
-
 .github {
     float: right;
     position: absolute;
@@ -56,7 +45,19 @@ body {
     margin-top: 10px;
 }
 
-#new-password {
+#footer-outer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#footer-inner {
+    margin-top: 30px;
+}
+
+#password-div {
     display: none;
 }
 
