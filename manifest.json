@@ -7,6 +7,7 @@
   "theme_color": "#5CB85C",
   "manifest_version": 2,
   "start_url": "./",
+  "background_color": "#FFFFFF",
   "icons": [{
     "src": "img/favicon_16px.png",
     "sizes": "16x16",
@@ -26,6 +27,10 @@
   }, {
     "src": "img/favicon_256px.png",
     "sizes": "256x256",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon_512px.png",
+    "sizes": "512x512",
     "type": "image/png"
   }]
 }

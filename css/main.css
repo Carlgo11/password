@@ -1,87 +1,66 @@
+body {
+    display: none;
+}
+
+/* =< Medium screen size */
+@media only screen and (min-device-width: 577px ) {
+    .row {
+        margin-top: 10vh;
+    }
+}
+
+/* >= Small screen size */
+@media only screen and (max-device-width: 991px) {
+
+    #generate {
+        margin-top: 5vh;
+    }
+
+    #new-password {
+        margin-top: 5vh;
+    }
+}
+
+@media only screen and(max-device-width: 1199px) {
+    #generate {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.row {
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
 .footer {
-  position: absolute;
-  bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  text-align: center;
-  width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 .footer2 {
-  margin-top: 30px;
-}
-
-.options {
-  float: left;
-  text-align: left;
+    margin-top: 30px;
 }
 
 .github {
-  float: right;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.title {
-  margin-left: 50px;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .length {
-  margin-top: 10px;
-  width: 60px;
-}
-
-.password {
-  width: 30em;
-}
-
-.password-container {
- float: right;
-}
-
-.generate {
-  margin-top: 5px;
-}
-
-.container {
-  width: 1025px;
-}
-
-.vertical-center {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  font: 0/0a;
-}
-
-.vertical-center:before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-  margin-top: 40px;
-}
-
-.vertical-center>.container {
-  max-width: 100%;
-  margin-top: 10%;
-  display: inline-block;
-  vertical-align: middle;
-  font: 16px/1"HelveticaNeue",Helvetica,Arial,sans-serif;
-}
-
-@media (max-width:768px) {
-  .vertical-center:before {
-    display: none;
-  }
-}
-
-body {
-  display: none;
+    margin-top: 10px;
 }
 
 #new-password {
-  display: none;
+    display: none;
+}
+
+#password-button {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
