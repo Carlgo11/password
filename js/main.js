@@ -23,7 +23,7 @@ $(document).ready(function () {
     }
 
     function genPassword() {
-        let pass;
+        let pass = '';
 
         for (i = 0; i < document.getElementById('length').value; i++) {
             let a = [];
