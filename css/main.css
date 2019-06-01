@@ -3,21 +3,14 @@ body {
     display: none;
 }
 
-/* =< Medium screen size */
-@media only screen and (min-device-width: 577px ) {
-    .row {
-        margin-top: 5vh;
-    }
-}
-
 /* >= Small screen size */
 @media only screen and (max-device-width: 991px) {
 
-    #generate {
+    #generate-div {
         margin-top: 5vh;
     }
 
-    #new-password {
+    #password-div {
         margin-top: 5vh;
     }
 }
@@ -33,6 +26,7 @@ body {
     box-shadow: revert !important;
     border-color: revert !important;
 }
+
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -45,6 +39,7 @@ body {
 .row {
     margin-left: 2vw;
     margin-right: 2vw;
+    margin-top: 5vh;
 }
 
 .github {
