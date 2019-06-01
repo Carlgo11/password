@@ -22,6 +22,12 @@ body {
     }
 }
 
+@media only screen and (max-device-height: 610px) {
+    #password-footer {
+        display: none;
+    }
+}
+
 *:focus {
     box-shadow: revert !important;
     border-color: revert !important;
@@ -71,12 +77,13 @@ body {
     width: 100%;
 }
 
-#footer-inner {
-    margin-top: 30px;
-}
-
 #password-div {
     display: none;
+}
+
+#password-footer {
+    text-align: center;
+    margin-top: 1vh;
 }
 
 #password-button {
