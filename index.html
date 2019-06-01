@@ -22,8 +22,10 @@
     <link href="./img/apple/apple-touch-icon-256px.png" rel="apple-touch-icon" sizes="256x256">
     <link href="manifest.json" rel="manifest"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/regular.min.css" integrity="sha256-Gou62iZG21fCiCXTxaShWysmGFcQRYUtiAAkRC4sAzM=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/fontawesome.min.css" integrity="sha256-H9ochMml3Lh6FE/KKTUFfw2hD7mxc9c8pXoqfIso5Zk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/regular.min.css"
+          integrity="sha256-Gou62iZG21fCiCXTxaShWysmGFcQRYUtiAAkRC4sAzM=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/fontawesome.min.css"
+          integrity="sha256-H9ochMml3Lh6FE/KKTUFfw2hD7mxc9c8pXoqfIso5Zk=" crossorigin="anonymous"/>
     <link href="./css/main.min.css" rel="stylesheet">
     <link href="./css/corner.min.css" rel="stylesheet">
     <link href="./css/loading.min.css" rel="stylesheet">
@@ -42,45 +44,46 @@
               fill="currentColor"></path>
     </svg>
 </a>
-<h1 class="title">Need a Carl Password?</h1>
+<h1 class="title noselect">Need a Carl Password?</h1>
 <div class="row">
 
 
     <!-- Options -->
     <div class="options col-12 col-md-4 offset-md-1">
 
-        <div class="custom-control custom-checkbox">
+        <div class="custom-control custom-checkbox noselect">
             <input checked="" class="custom-control-input" id="l" type="checkbox">
             <label class="custom-control-label" for="l">Lowercase letters</label>
         </div>
 
-        <div class="custom-control custom-checkbox">
+        <div class="custom-control custom-checkbox noselect">
             <input checked="" class="custom-control-input" id="u" type="checkbox">
             <label class="custom-control-label" for="u">Uppercase letters</label>
         </div>
 
-        <div class="custom-control custom-checkbox">
+        <div class="custom-control custom-checkbox noselect">
             <input checked="" class="custom-control-input" id="d" type="checkbox">
             <label class="custom-control-label" for="d">Numbers</label>
         </div>
 
-        <div class="custom-control custom-checkbox">
+        <div class="custom-control custom-checkbox noselect">
             <input checked="" class="custom-control-input" id="s" type="checkbox">
             <label class="custom-control-label" for="s">Special characters</label>
         </div>
 
-        <div class="custom-control custom-checkbox">
+        <div class="custom-control custom-checkbox noselect">
             <input class="custom-control-input" id="un" type="checkbox">
             <label class="custom-control-label" for="un">Unicode characters</label>
         </div>
 
-        <div class="custom-control custom-checkbox">
+        <div class="custom-control custom-checkbox noselect">
             <input checked="" class="custom-control-input" id="sp" type="checkbox">
             <label class="custom-control-label" for="sp">Spaces</label>
         </div>
 
         <div>
-            <label for="length">Length:</label><input class="length" id="length" min="1" type="number" value="64">
+            <label for="length" class="noselect">Length:</label><input class="length" id="length" min="1" type="number"
+                                                                       value="64">
         </div>
 
         <button autofocus="" class="btn btn-success generate col-10 col-sm-5 col-md-12 col-xl-4" id="generate">
@@ -91,8 +94,8 @@
 
 
     <!-- Password -->
-    <div class="col col-lg-5  col-md-7 " id="password-div">
-        <label class="lead" for="password">New password:</label>
+    <div class="col col-lg-5  col-md-7" id="password-div">
+        <label class="lead noselect" for="password">New password:</label>
         <div class="input-group">
             <input class="form-control" id="password" type="text">
             <span class="input-group-btn" id="password-button-span">

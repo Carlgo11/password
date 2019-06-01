@@ -1,12 +1,6 @@
 $(window).on('load', function () {
     $('body').fadeIn();
 });
-/*
-$(document).on('pageload', function () {
-    $.showLoading({
-        name: 'jump-pulse'
-    });
-});*/
 
 $(document).ready(function () {
 
@@ -25,7 +19,7 @@ $(document).ready(function () {
     function genPassword() {
         let pass = '';
 
-        for (i = 0; i < document.getElementById('length').value; i++) {
+        for (let i = 0; i < document.getElementById('length').value; i++) {
             let a = [];
             if (document.getElementById('d').checked) {
                 a.push([
