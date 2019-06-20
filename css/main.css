@@ -28,9 +28,13 @@ body {
     }
 }
 
-*:focus {
-    box-shadow: revert !important;
-    border-color: revert !important;
+*:focus, *:before {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn {
+    border-radius: unset;
 }
 
 .noselect {
@@ -64,7 +68,7 @@ body {
 
 #length {
     margin-top: 10px;
-    width: 57.6px;
+    width: 58px;
     border: 0;
     text-align: center;
 }
@@ -87,6 +91,8 @@ body {
 }
 
 #password-button {
+    border-radius: 4px;
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
+
 }
