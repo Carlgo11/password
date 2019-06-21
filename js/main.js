@@ -79,7 +79,7 @@ $(document).ready(function () {
         }
 
         $('#password').val(pass.toString());
-        $('#password-div').fadeIn();
+        $('#password-div').css('visibility', 'visible').hide().fadeIn();
     }
 
     function setTooltip(message) {
