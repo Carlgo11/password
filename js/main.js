@@ -79,7 +79,9 @@ $(document).ready(function () {
         }
 
         $('#password').val(pass.toString());
-        $('#password-div').css('visibility', 'visible').hide().fadeIn();
+        if ($('#password').css('visibility') != 'visible') {
+            $('#password-div').css('visibility', 'visible').hide().fadeIn();
+        }
     }
 
     function setTooltip(message) {
