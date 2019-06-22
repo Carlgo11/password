@@ -79,7 +79,7 @@ $(document).ready(function () {
         }
 
         $('#password').val(pass.toString());
-        if ($('#password').css('visibility') != 'visible') {
+        if ($('#password').css('visibility') !== 'visible') {
             $('#password-div').css('visibility', 'visible').hide().fadeIn();
         }
     }
