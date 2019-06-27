@@ -64,7 +64,6 @@ self.addEventListener('install', event => {
     )
 });
 
-
 self.addEventListener('activate', event => {
     let expectedCacheNames = Object.keys(CURRENT_CACHES).map(function (key) {
         return CURRENT_CACHES[key];

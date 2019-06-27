@@ -1,9 +1,16 @@
+/* Hide all elements before everything is ready */
 body {
-    /* Hide all elements before everything is ready */
     display: none;
 }
 
-/* >= Small screen size */
+/* ≥ Small screen size */
+@media only screen and (max-device-width: 575px) {
+    .row {
+        margin-top: 2vh !important;
+    }
+}
+
+/* ≥ Large screen size */
 @media only screen and (max-device-width: 991px) {
 
     #generate-div, #password-div {
@@ -19,6 +26,7 @@ body {
     }
 }
 
+/* ≥ Extra large screen size */
 @media only screen and (max-device-width: 1199px) {
     #generate {
         margin: 0 auto;
@@ -26,16 +34,18 @@ body {
     }
 }
 
+/* Stop footers from intersecting */
 @media only screen and (max-device-height: 650px) {
     #password-footer {
         display: none;
     }
 }
 
+/* Dark theme */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #222;
-        color: #ccc;
+        background: linear-gradient(#222, #333) fixed;
+        color: #E6E6E6;
     }
 
     #length, #password {
@@ -48,11 +58,21 @@ body {
     }
 
     #password {
-        border-color: #444;
+        border: 0 !important;
+        background-color: #444;
     }
 
+    #password:hover {
+        box-shadow: none !important;
+        background-color: #494949;
+    }
+
+    .btn {
+        background-color: #24933f;
+    }
 }
 
+/* Remove Bootstrap glow */
 *:focus, *:before {
     outline: none !important;
     box-shadow: none !important;
@@ -77,13 +97,6 @@ body {
     margin-left: 2vw;
     margin-right: 2vw;
     margin-top: 5vh;
-}
-
-.github {
-    float: right;
-    position: absolute;
-    top: 0;
-    right: 0;
 }
 
 .title {
@@ -118,15 +131,23 @@ body {
     visibility: hidden;
 }
 
+#password {
+    border-radius: 0;
+    border: 1px solid #dfe1e5;
+}
+
+#password:hover {
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+
 #password-footer {
     text-align: center;
     margin-top: 1vh;
 }
 
 #password-button {
-    border-radius: 4px;
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
+    border: none;
+    height: 100%;
 }
 
 .options {
