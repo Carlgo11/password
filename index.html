@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="Generate a Carl Password." name="description">
-    <meta content="Carlgo11" name="author">
-    <meta content="yes" name="mobile-web-app-capable">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="#5CB85C" name="apple-mobile-web-app-status-bar-style">
-    <meta content="Carl Passwords" name="apple-mobile-web-app-title">
-    <meta content="#5CB85C" name="theme-color">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Generate a Carl Password.">
+    <meta name="author" content="Carlgo11">
+    <meta name="theme-color" content="#5CB85C">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Carl Passwords">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#5CB85C">
+    <link href="./img/apple/apple-touch-icon-64px.png" rel="apple-touch-icon" sizes="64x64">
+    <link href="./img/apple/apple-touch-icon-128px.png" rel="apple-touch-icon" sizes="128x128">
+    <link href="./img/apple/apple-touch-icon-256px.png" rel="apple-touch-icon" sizes="256x256">
     <link href="./img/favicon_16px.png" rel="icon" sizes="16x16" type="image/png">
     <link href="./img/favicon_32px.png" rel="icon" sizes="32x32" type="image/png">
     <link href="./img/favicon_64px.png" rel="icon" sizes="64x64" type="image/png">
     <link href="./img/favicon_128px.png" rel="icon" sizes="128x128" type="image/png">
     <link href="./img/favicon_256px.png" rel="icon" sizes="256x256" type="image/png">
     <link href="./img/favicon_512px.png" rel="icon" sizes="512X512" type="image/png">
-    <link href="./img/apple/apple-touch-icon-64px.png" rel="apple-touch-icon" sizes="64x64">
-    <link href="./img/apple/apple-touch-icon-128px.png" rel="apple-touch-icon" sizes="128x128">
-    <link href="./img/apple/apple-touch-icon-256px.png" rel="apple-touch-icon" sizes="256x256">
     <link href="manifest.json" rel="manifest"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/regular.min.css"
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/regular.min.css" rel="stylesheet"
           integrity="sha256-Gou62iZG21fCiCXTxaShWysmGFcQRYUtiAAkRC4sAzM=" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/fontawesome.min.css"
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/fontawesome.min.css" rel="stylesheet"
           integrity="sha256-H9ochMml3Lh6FE/KKTUFfw2hD7mxc9c8pXoqfIso5Zk=" crossorigin="anonymous"/>
     <link href="./css/main.min.css" rel="stylesheet">
     <link href="./css/corner.min.css" rel="stylesheet">
@@ -33,6 +33,7 @@
 </head>
 <body>
 
+<!-- Octocat -->
 <a aria-label="View source on Github" class="github-corner" href="https://github.com/Carlgo11/password">
     <svg aria-hidden="true" class="github-svg" height="80" viewBox="0 0 250 250" width="80">
         <path class="octo-triangle" d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -50,7 +51,7 @@
 <div class="row justify-content-center">
 
     <!-- Options -->
-    <div class="options col-12 col-md-4 offset-md-1">
+    <div class="options col-12 col-md-4">
 
         <div class="custom-control custom-checkbox noselect">
             <input checked="" class="custom-control-input" id="l" type="checkbox">
@@ -83,9 +84,10 @@
         </div>
 
         <div>
-            <label for="length" class="noselect">Length:</label><input class="length" id="length" min="1" type="number"
-                                                                       value="64">
+            <label for="length" class="noselect">Length:</label>
+            <input class="length" id="length" min="1" type="number" value="64">
         </div>
+
         <div id="generate-div">
             <button autofocus="" class="btn btn-success generate col-10 col-sm-5 col-md-12 col-xl-4" id="generate">
                 Generate
@@ -94,18 +96,27 @@
 
     </div>
 
-
     <!-- Password -->
     <div class="col col-lg-5  col-md-7" id="password-div">
         <label class="lead noselect" for="password">New password:</label>
+
         <div class="input-group">
+
+            <!-- Password field -->
             <input class="form-control" id="password" type="text">
+
+            <!-- Copy button -->
             <span class="input-group-btn" id="password-button-span">
-              <button class="btn btn-success" data-clipboard-target="#password" id="password-button" type="button"><i
-                      class="far fa-copy"></i></button>
+              <button class="btn btn-success" data-clipboard-target="#password" id="password-button" type="button">
+                  <i class="far fa-copy"></i>
+              </button>
             </span>
+
         </div>
-        <div id="password-footer">Don't forget to turn on <a href="https://twofactorauth.org/">2FA</a> when available!
+
+        <!-- TFA notice -->
+        <div id="password-footer">
+            Don't forget to turn on <a href="https://twofactorauth.org/">2FA</a> when available!
         </div>
 
     </div>
