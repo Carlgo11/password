@@ -1,6 +1,4 @@
-// Incrementing CACHE_VERSION will kick off the install event and force previously cached
-// resources to be cached again.
-const CACHE_VERSION = 1;
+const CACHE_VERSION = 2;
 let CURRENT_CACHES = {
     offline: 'offline-v' + CACHE_VERSION,
     assets: 'assets-v' + CACHE_VERSION
@@ -40,13 +38,12 @@ self.addEventListener('install', event => {
                     'css/main.min.css',
                     'css/corner.min.css',
                     'css/loading.min.css',
+                    'css/bootstrap.min.css',
+                    'css/fontawesome.min.css',
 
                     'js/main.min.js',
 
-                    'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css',
                     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/regular.min.css',
-                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/fontawesome.min.css',
-
                     'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
                     'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',
                     'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js',
