@@ -126,7 +126,7 @@ $(document).ready(function () {
         }, 2000);
     }
 
-    let clipboard = new Clipboard('#password-button');
+    let clipboard = new ClipboardJS('#password-button');
 
     clipboard.on('success', function (e) {
         e.clearSelection();
