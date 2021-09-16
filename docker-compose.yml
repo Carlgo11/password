@@ -1,8 +1,7 @@
 version: '3.1'
 services:
   password:
-    #image: carlgo11/password
-    build: .
+    image: carlgo11/password
     ports:
       - "8080:8080"
     read_only: true
