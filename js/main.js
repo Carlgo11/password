@@ -114,28 +114,13 @@ $(document).ready(function () {
         }
     }
 
-    function setTooltip(message) {
-        $('#password-button-span').tooltip('hide')
-            .attr('data-original-title', message)
-            .tooltip('show');
-    }
-
-    function hideTooltip() {
-        setTimeout(function () {
-            $('#password-button-span').tooltip('dispose');
-        }, 2000);
-    }
-
     let clipboard = new ClipboardJS('#password-button');
 
     clipboard.on('success', function (e) {
         e.clearSelection();
-        setTooltip('Copied!');
-        hideTooltip();
     });
 
     clipboard.on('error', function (e) {
-        setTooltip('Error');
         console.error('Error copying to clipboard.' + e);
     });
 });
