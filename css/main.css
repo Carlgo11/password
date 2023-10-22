@@ -6,11 +6,6 @@
     margin: .1em 0;
 }
 
-/* Hide all elements before everything is ready */
-body {
-    display: none;
-}
-
 /* ≥ Small screen size */
 @media only screen and (max-device-width: 575px) {
     .row {
@@ -137,6 +132,8 @@ body {
 
 #password-div {
     visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
 }
 
 #password {

@@ -9,12 +9,8 @@
   "start_url": "./",
   "background_color": "#FFFFFF",
   "icons": [{
-    "src": "img/favicon_16px.png",
+    "src": "img/favicon.png",
     "sizes": "16x16",
-    "type": "image/png"
-  }, {
-    "src": "img/favicon_32px.png",
-    "sizes": "32x32",
     "type": "image/png"
   }, {
     "src": "img/favicon.svg",

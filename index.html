@@ -2,25 +2,19 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Generate a Carl Password.">
     <meta name="author" content="Carlgo11">
     <meta name="theme-color" content="#5CB85C">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Carl Passwords">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#5CB85C">
     <link rel="apple-touch-icon" href="./img/apple/apple-touch-icon-64px.png" sizes="64x64"/>
     <link rel="apple-touch-icon" href="./img/apple/apple-touch-icon-128px.png" sizes="128x128"/>
     <link rel="apple-touch-icon" href="./img/apple/apple-touch-icon-256px.png" sizes="256x256"/>
-    <link rel="icon" href="./img/favicon_16px.png" sizes="16x16" type="image/png"/>
-    <link rel="icon" href="./img/favicon_32px.png" sizes="32x32" type="image/png"/>
+    <link rel="icon" href="./img/favicon.png" sizes="16x16" type="image/png"/>
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml"/>
     <link rel="manifest" href="manifest.json"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/regular.min.css" integrity="sha512-YoxvmIzlVlt4nYJ6QwBqDzFc+2aXL7yQwkAuscf2ZAg7daNQxlgQHV+LLRHnRXFWPHRvXhJuBBjQqHAqRFkcVw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+          integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="./css/main.css"/>
     <title>Carl Passwords</title>
 </head>
@@ -73,7 +67,6 @@
                 Generate
             </button>
         </div>
-
     </div>
 
     <!-- Password -->
@@ -88,7 +81,9 @@
             <!-- Copy button -->
             <span class="input-group-btn" id="password-button-span">
               <button class="btn btn-success" data-clipboard-target="#password" id="password-button" type="button">
-                  <i class="far fa-copy"></i>
+                  <svg height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/>
+                  </svg>
               </button>
             </span>
 
@@ -107,8 +102,6 @@
     Created by <a href="https://carlgo11.com/">Carlgo11</a>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js" integrity="sha512-7O5pXpc0oCRrxk8RUfDYFgn0nO1t+jLuIOQdOMRp4APB7uZ4vSjspzp5y6YDtDs4VzUSTbWzBFZ/LKJhnyFOKw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>
