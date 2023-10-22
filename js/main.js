@@ -2,6 +2,28 @@ $(window).on('load', function () {
     $('body').fadeIn();
 });
 
+document.querySelectorAll('input[type=number]').forEach(el => {
+    const v = localStorage.getItem(el.id)
+    if (v) el.value = v;
+    el.onchange = () => localStorage.setItem(el.id, el.value);
+})
+
+document.querySelectorAll('input[type=checkbox]').forEach(el => {
+    el.onchange = () => localStorage.setItem(el.id, el.checked);
+    const v = localStorage.getItem(el.id)
+    if (v === 'true') el.checked = true;
+    else if (v === 'false') el.checked = false;
+})
+
+document.querySelectorAll('input[type=number]').forEach(el => {
+
+})
+
+document.querySelectorAll('input[type=checkbox]').forEach(el => {
+
+})
+
+
 $(document).ready(function () {
 
     if ('serviceWorker' in navigator) {
