@@ -36,7 +36,7 @@ document.getElementById('generate').addEventListener('click', () => {
         pass += String.fromCharCode(getRandomInt(min, max));
     }
     document.getElementById('password').value = pass;
-    document.getElementById('pass-inner').style.gridTemplateColumns = `min(${pass.length}ch,100%) 36px`
+    document.getElementById('pass-inner').style.gridTemplateColumns = `min(${pass.length}ch, calc(100% - 36px)) 36px`
     const passwordDiv = document.getElementById('password-container');
     if (passwordDiv.style.opacity !== '1') passwordDiv.style.opacity = '1';
 });
