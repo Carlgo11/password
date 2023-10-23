@@ -1,51 +1,105 @@
-.btn-success {
-    background: #24933f;
-}
-
 .custom-control {
     margin: .1em 0;
 }
 
-/* ≥ Small screen size */
-@media only screen and (max-device-width: 575px) {
-    .row {
-        margin-top: 2vh !important;
-    }
+#generate {
+    width: 100%;
+    margin-top: 0.5em;
+    padding: 0.3em;
+    color: currentColor;
+    font-size: 25px;
+    font-weight: 300;
+    background: #24933f;
 }
 
-/* ≥ Large screen size */
-@media only screen and (max-device-width: 991px) {
+main {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1.5fr;
+    grid-column-gap: 2rem;
+    margin: auto 10vw;
+}
 
-    #generate-div, #password-div {
-        margin-top: 5vh;
-    }
+.options {
+    font-size: 1.4em;
+    line-height: 1.6;
+    max-width: max-content;
+}
 
-    #password-div {
-        margin-bottom: 2vh;
-    }
+.options input[type=checkbox] {
+    height: 1.5em;
+    aspect-ratio: 1;
+}
 
-    .github-corner, #footer-outer {
-        display: none;
-    }
+#length {
+    font-size: 90%;
+}
+
+#password {
+    width: calc(100% - 3.9em);
+    border-radius: 0;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid #dfe1e5;
+}
+
+#password:hover {
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+
+#password-container {
+    /*visibility: hidden;*/
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+
+#password-footer {
+    text-align: center;
+    margin-top: 1vh;
+}
+
+label[for=password] {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+#password-button {
+    height: 100%;
+    padding: .5rem .7rem;
+    margin-left: -.3em;
+    color: currentColor;
+    background: #24933f;
+    border: none;
+}
+
+#title {
+    margin-top: 3vh;
+    margin-left: 5vh;
+    font-weight: 100;
+    font-size: 3.5em;
+}
+
+#length {
+    margin-top: 10px;
+    width: 58px;
+    border: 0;
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    z-index: -1;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-/* ≥ Extra large screen size */
-@media only screen and (max-device-width: 1199px) {
-    #generate {
-        margin: 0 auto;
-        display: block;
-    }
-}
-
-/* Stop footers from intersecting */
-@media only screen and (max-device-height: 650px) {
-    #password-footer {
-        display: none;
-    }
 }
 
 /* Dark theme */
@@ -63,7 +117,6 @@ body {
     * {
         border-color: transparent;
     }
-
     #password {
         border: 0 !important;
         background-color: #444;
@@ -75,90 +128,43 @@ body {
     }
 }
 
-/* Remove Bootstrap glow */
+/* Remove glow */
 *:focus, *:before {
     outline: none !important;
     box-shadow: none !important;
 }
 
-.btn {
-    border-radius: unset;
-    -webkit-border-radius: unset;
-    border-color: transparent;
-}
-
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.row {
-    margin-left: 2vw;
-    margin-right: 2vw;
-    margin-top: 5vh;
-}
-
-.title {
-    margin-top: 3vh;
-    margin-left: 5vh;
-    font-weight: 100;
-    font-size: 3.5em;
-}
-
-#generate {
-    font-size: 25px;
-    font-weight: 300;
-}
-
-#length {
-    margin-top: 10px;
-    width: 58px;
-    border: 0;
-    text-align: center;
-}
-
-#footer-outer {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
-    text-align: center;
-    width: 100%;
-    z-index: -1;
-}
-
-#password-div {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s;
-}
-
-#password {
-    border-radius: 0;
-    border: 1px solid #dfe1e5;
-}
-
-#password:hover {
-    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-}
-
-#password-footer {
-    text-align: center;
-    margin-top: 1vh;
-}
-
-#password-button {
-    border: none;
-    height: 100%;
-}
-
 a {
     text-decoration: none;
+    color: #0d6efd;
 }
 
-.options {
-    font-size: 1.2em;
+@media only screen and (max-device-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-column-gap: 0;
+        margin: auto 1rem;
+        grid-row-gap: 2rem;
+    }
+
+
+    .options {
+        max-width: unset;
+    }
+
+    #generate {
+        margin: 2rem auto 0;
+        display: block;
+        padding: 0.5em 5rem;
+        width: 50%;
+        min-width: max-content;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-device-height: 700px) {
+    footer {
+        display: none;
+    }
 }

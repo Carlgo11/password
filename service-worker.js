@@ -34,27 +34,8 @@ self.addEventListener('install', event => {
                     '.',
                     'index.html',
                     'manifest.json',
-
-                    'css/main.min.css',
-                    'css/corner.min.css',
-                    'css/loading.min.css',
-                    'css/bootstrap.min.css',
-                    'css/fontawesome.min.css',
-
+                    'css/main.css',
                     'js/main.min.js',
-
-                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/regular.min.css',
-                    'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
-                    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',
-                    'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js',
-                    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js',
-
-                    'img/favicon_16px.png',
-                    'img/favicon_32px.png',
-                    'img/favicon_64px.png',
-                    'img/favicon_128px.png',
-                    'img/favicon_256px.png',
-                    'img/favicon_512px.png',
                 ]
             );
         })

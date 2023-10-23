@@ -35,13 +35,11 @@ document.getElementById('generate').addEventListener('click', () => {
         }
         pass += String.fromCharCode(getRandomInt(min, max));
     }
-
-    document.getElementById('password').value = pass;
-    const passwordDiv = document.getElementById('password-div');
-    if (passwordDiv.style.visibility !== 'visible') {
-        passwordDiv.style.visibility = 'visible';
-        passwordDiv.style.opacity = '1';
-    }
+    const password = document.getElementById('password')
+    password.value = pass;
+    password.style.maxWidth = pass.length + 'ch';
+    const passwordDiv = document.getElementById('password-container');
+    if (passwordDiv.style.opacity !== '1') passwordDiv.style.opacity = '1';
 });
 
 document.getElementById('password-button').addEventListener('click', async () => {
