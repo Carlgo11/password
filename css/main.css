@@ -37,9 +37,9 @@ main {
 
 #password {
     border-radius: 0;
-    padding: .375rem .75rem;
+    padding: .5em .375em;
     line-height: 1.5;
-    font-size: 1rem;
+    font-size: 1em;
     border: 1px solid #dfe1e5;
 }
 
@@ -74,6 +74,10 @@ label[for=password] {
     color: currentColor;
     background: #24933f;
     border: none;
+}
+
+button:active {
+    opacity: .8;
 }
 
 #title {
