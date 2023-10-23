@@ -43,14 +43,11 @@ main {
     border: 1px solid #dfe1e5;
 }
 
-#password:hover {
-    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-}
-
 #password-container {
     opacity: 0;
     transition: visibility 0s, opacity 0.5s;
 }
+
 #pass-inner {
     display: grid;
     grid-template-columns: auto 36px;
@@ -68,12 +65,20 @@ label[for=password] {
     margin-bottom: .5rem;
 }
 
-#password-button {
+#copy {
     height: 100%;
     aspect-ratio: 1;
-    color: currentColor;
     background: #24933f;
     border: none;
+}
+
+#copy > svg {
+    height: 1.2em;
+    fill: #fff;
+}
+
+button {
+    border-color: transparent;
 }
 
 button:active {
@@ -119,16 +124,12 @@ body {
         color: unset;
     }
 
-    * {
-        border-color: transparent;
-    }
     #password {
         border: 0 !important;
         background-color: #444;
     }
 
     #password:hover {
-        box-shadow: none !important;
         background-color: #494949;
     }
 }
@@ -176,6 +177,7 @@ a {
         text-align: center;
     }
 }
+
 @media only screen and (max-height: 700px) {
     footer {
         display: none;

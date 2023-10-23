@@ -7,8 +7,7 @@ document.querySelectorAll('input[type=number]').forEach(el => {
 document.querySelectorAll('input[type=checkbox]').forEach(el => {
     el.onchange = () => localStorage.setItem(el.id, el.checked);
     const v = localStorage.getItem(el.id)
-    if (v === 'true') el.checked = true;
-    else if (v === 'false') el.checked = false;
+    if (v === 'true') el.checked = true; else if (v === 'false') el.checked = false;
 })
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,32 +15,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById('generate').addEventListener('click', () => {
-    let pass = '';
-    const a = getAvailableChars();
+    const availableChars = getAvailableChars();
+    const maxLength = document.getElementById('length').value;
+    let password = '';
 
-    for (let i = 0; i < document.getElementById('length').value; i++) {
-
-        const type = getRandomInt(0, a.length - 1);
-        let min;
-        let max;
-        /* Check if a is 2D array */
-        if (a[type][0] !== undefined && a[type][0].constructor === Array) {
-            const charRange = getRandomInt(0, a[type].length - 1);
-            min = a[type][charRange][0];
-            max = a[type][charRange][1];
-        } else {
-            min = a[type][0];
-            max = a[type][1];
-        }
-        pass += String.fromCharCode(getRandomInt(min, max));
+    for (let i = 0; i < maxLength; i++) {
+        const typeIndex = getRandomInt(0, availableChars.length - 1);
+        const [min, max] = getRandomRange(availableChars[typeIndex]);
+        password += String.fromCharCode(getRandomInt(min, max));
     }
-    document.getElementById('password').value = pass;
-    document.getElementById('pass-inner').style.gridTemplateColumns = `min(${pass.length}ch, calc(100% - 36px)) 36px`
-    const passwordDiv = document.getElementById('password-container');
-    if (passwordDiv.style.opacity !== '1') passwordDiv.style.opacity = '1';
+
+    document.getElementById('password').value = password;
+    document.getElementById('pass-inner').style.gridTemplateColumns = `min(${password.length}ch, calc(100% - 36px)) 36px`;
+
+    const passwordContainer = document.getElementById('password-container');
+    if (passwordContainer.style.opacity !== '1') {
+        passwordContainer.style.opacity = '1';
+    }
 });
 
-document.getElementById('password-button').addEventListener('click', async () => {
+document.getElementById('copy').addEventListener('click', async () => {
     try {
         const passwordInput = document.getElementById('password');
         await navigator.clipboard.writeText(passwordInput.value);
@@ -51,39 +44,31 @@ document.getElementById('password-button').addEventListener('click', async () =>
     }
 });
 
+const getRandomRange = (range) => {
+    if (range[0] !== undefined && range[0].constructor === Array) {
+        const randomIndex = getRandomInt(0, range.length - 1);
+        return [range[randomIndex][0], range[randomIndex][1]];
+    } else {
+        return [range[0], range[1]];
+    }
+};
 
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const getAvailableChars = () => {
+    const charRanges = {
+        d: [48, 57], // Numbers
+        u: [65, 90], // Uppercase letters
+        l: [97, 122], // Lowercase letters
+        un: [[42128, 44031], [55216, 129647], [192, 8587], [42240, 42539]], // Unicode characters
+        s: [[33, 47], [58, 64], [91, 96], [123, 126]], // Special characters
+        sp: [32, 32] // Space
+    };
     let a = [];
-    /* Numbers */
-    if (document.getElementById('d').checked) {
-        a.push([48, 57]);
-    }
-
-    /* Uppercase letters */
-    if (document.getElementById('u').checked) {
-        a.push([65, 90]);
-    }
-
-    /* Lowercase letters */
-    if (document.getElementById('l').checked) {
-        a.push([97, 122]);
-    }
-
-    /* Unicode characters */
-    if (document.getElementById('un').checked) {
-        a.push([[42128, 44031], [55216, 129647], [192, 8587], [42240, 42539]]);
-    }
-
-    /* Special characters */
-    if (document.getElementById('s').checked) {
-        a.push([[33, 47], [58, 64], [91, 96], [123, 126]]);
-    }
-
-    /* Space */
-    if (document.getElementById('sp').checked) {
-        a.push([32, 32]);
+    for (const key in charRanges) {
+        if (document.getElementById(key).checked) {
+            a.push(charRanges[key]);
+        }
     }
     return a;
-}
+};
