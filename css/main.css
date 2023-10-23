@@ -153,7 +153,6 @@ a {
         grid-row-gap: 2rem;
     }
 
-
     .options {
         max-width: unset;
     }
@@ -168,6 +167,15 @@ a {
     }
 }
 
+@media only screen and (max-device-width: 620px) {
+    #title {
+        font-size: 9vw;
+        font-weight: 300;
+        margin: auto;
+        line-height: 2;
+        text-align: center;
+    }
+}
 @media only screen and (max-height: 700px) {
     footer {
         display: none;
