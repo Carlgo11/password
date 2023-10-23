@@ -36,12 +36,10 @@ main {
 }
 
 #password {
-    width: calc(100% - 3.9em);
     border-radius: 0;
     padding: .375rem .75rem;
     line-height: 1.5;
     font-size: 1rem;
-    margin-top: 0.5rem;
     border: 1px solid #dfe1e5;
 }
 
@@ -50,11 +48,13 @@ main {
 }
 
 #password-container {
-    /*visibility: hidden;*/
     opacity: 0;
     transition: visibility 0s, opacity 0.5s;
 }
-
+#pass-inner {
+    display: grid;
+    grid-template-columns: auto 36px;
+}
 
 #password-footer {
     text-align: center;
@@ -64,12 +64,12 @@ main {
 label[for=password] {
     font-size: 1.3rem;
     font-weight: 300;
+    margin-bottom: .5rem;
 }
 
 #password-button {
     height: 100%;
-    padding: .5rem .7rem;
-    margin-left: -.3em;
+    aspect-ratio: 1;
     color: currentColor;
     background: #24933f;
     border: none;
