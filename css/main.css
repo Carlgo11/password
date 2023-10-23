@@ -54,6 +54,7 @@ main {
 #pass-inner {
     display: grid;
     grid-template-columns: auto 36px;
+    justify-content: start;
 }
 
 #password-footer {
