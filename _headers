@@ -1,7 +1,7 @@
 # This file is used by CF to generate response headers. The same headers can be sent via Apache, Nginx or any other web server.
 
 /*
-  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; style-src-attr: 'unsafe-inline'; img-src 'self' data:; worker-src 'self'; manifest-src 'self';
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; style-src-attr 'unsafe-inline'; img-src 'self' data:; worker-src 'self'; manifest-src 'self';
   Cross-Origin-Resource-Policy: cross-origin
   Cross-Origin-Opener-Policy: same-origin
   Access-Control-Allow-Origin: null
