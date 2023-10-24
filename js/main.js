@@ -17,20 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById('generate').addEventListener('click', () => {
     const availableChars = getAvailableChars();
     const maxLength = document.getElementById('length').value;
-    let password = '';
 
-    for (let i = 0; i < maxLength; i++) {
+    const passwordArray = [];
+    for(let i = 0; i < maxLength;i++){
         const typeIndex = getRandomInt(0, availableChars.length - 1);
         const [min, max] = getRandomRange(availableChars[typeIndex]);
-        password += String.fromCharCode(getRandomInt(min, max));
+        passwordArray.push(String.fromCharCode(getRandomInt(min, max)));
     }
 
-    document.getElementById('password').value = password;
-    document.getElementById('pass-inner').style.gridTemplateColumns = `min(${password.length}ch, calc(100% - 36px)) 36px`;
+    document.getElementById('password').value = passwordArray.join('');
+    document.getElementById('passwordContainer').style.gridTemplateColumns = `min(${passwordArray.length}ch, calc(100% - 36px)) 36px`;
 
-    const passwordContainer = document.getElementById('password-container');
-    if (passwordContainer.style.opacity !== '1') {
-        passwordContainer.style.opacity = '1';
+    const passwordDisplay = document.getElementById('passwordDisplay');
+    if (passwordDisplay.style.opacity !== '1') {
+        passwordDisplay.style.opacity = '1';
     }
 });
 

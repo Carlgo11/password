@@ -31,8 +31,18 @@ main {
     aspect-ratio: 1;
 }
 
+.options > div {
+    display: grid;
+    grid-template-columns: 1.5em auto;
+    justify-content: left;
+    align-items: center;
+}
+
 #length {
     font-size: 90%;
+    width: 58px;
+    border: 0;
+    text-align: center;
 }
 
 #password {
@@ -43,20 +53,15 @@ main {
     border: 1px solid #dfe1e5;
 }
 
-#password-container {
+#passwordDisplay {
     opacity: 0;
     transition: visibility 0s, opacity 0.5s;
 }
 
-#pass-inner {
+#passwordContainer {
     display: grid;
     grid-template-columns: auto 36px;
     justify-content: start;
-}
-
-#password-footer {
-    text-align: center;
-    margin-top: 1vh;
 }
 
 label[for=password] {
@@ -90,13 +95,6 @@ button:active {
     margin-left: 5vh;
     font-weight: 100;
     font-size: 3.5em;
-}
-
-#length {
-    margin-top: 10px;
-    width: 58px;
-    border: 0;
-    text-align: center;
 }
 
 footer {
@@ -168,7 +166,7 @@ a {
     }
 }
 
-@media only screen and (max-device-width: 620px) {
+@media only screen and (max-device-width: 700px) {
     #title {
         font-size: 9vw;
         font-weight: 300;
@@ -176,9 +174,7 @@ a {
         line-height: 2;
         text-align: center;
     }
-}
 
-@media only screen and (max-height: 700px) {
     footer {
         display: none;
     }

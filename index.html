@@ -23,46 +23,34 @@
     <div class="options">
         <div>
             <input checked="" id="l" type="checkbox">
-            <label class="form-check-label" for="l">Lowercase letters</label>
-        </div>
+            <label for="l">Lowercase letters</label>
 
-        <div>
             <input checked="" id="u" type="checkbox">
-            <label class="form-check-label" for="u">Uppercase letters</label>
-        </div>
+            <label for="u">Uppercase letters</label>
 
-        <div>
             <input checked="" id="d" type="checkbox">
-            <label class="form-check-label" for="d">Numbers</label>
-        </div>
+            <label for="d">Numbers</label>
 
-        <div>
             <input checked="" id="s" type="checkbox">
-            <label class="form-check-label" for="s">Special characters</label>
-        </div>
+            <label for="s">Special characters</label>
 
-        <div>
             <input id="un" type="checkbox">
-            <label class="form-check-label" for="un">Unicode characters</label>
-        </div>
+            <label for="un">Unicode characters</label>
 
-        <div>
             <input id="sp" type="checkbox">
-            <label class="form-check-label" for="sp">Spaces</label>
+            <label for="sp">Spaces</label>
         </div>
 
-        <div>
-            <label for="length">Length:</label>
-            <input class="length" id="length" min="1" type="number" value="72">
-        </div>
+        <label for="length">Length:</label>
+        <input id="length" min="1" type="number" value="72">
 
         <button autofocus="" id="generate">Generate</button>
     </div>
 
     <!-- Password -->
-    <div id="password-container">
+    <div id="passwordDisplay">
         <label for="password">New password:</label>
-        <div id="pass-inner">
+        <div id="passwordContainer">
             <!-- Password field -->
             <input id="password" type="text">
             <!-- Copy button -->
@@ -75,6 +63,6 @@
     Created by <a href="https://carlgo11.com/">Carlgo11</a>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
