@@ -6,8 +6,10 @@
   "display": "standalone",
   "theme_color": "#24933F",
   "manifest_version": 2,
+  "orientation": "any",
   "start_url": "/",
   "background_color": "#FFFFFF",
+  "lang": "en",
   "icons": [{
     "src": "img/favicon.png",
     "sizes": "16x16",
@@ -15,6 +17,29 @@
   }, {
     "src": "img/favicon.svg",
     "sizes": "any",
-    "type": "images/svg+xml"
-  }]
+    "type": "image/svg+xml"
+  },
+    {
+      "src": "img/maskable.svg",
+      "sizes": "any",
+      "purpose": "maskable",
+      "type": "image/svg+xml"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "img/screenshots/mobile.png",
+      "type": "image/png",
+      "purpose": "any",
+      "sizes": "562x1216",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "img/screenshots/desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "purpose": "any"
+    }
+  ]
 }

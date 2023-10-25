@@ -10,7 +10,7 @@ document.querySelectorAll('input[type=checkbox]').forEach(el => {
     if (v === 'true') el.checked = true; else if (v === 'false') el.checked = false;
 })
 
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('/js/service-worker.js',{ scope: '/' }).then(r => console.debug(r));
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/js/service-worker.js', {scope: '/'});
 
 document.getElementById('generate').addEventListener('click', () => {
     const availableChars = getAvailableChars();
