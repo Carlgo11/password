@@ -1,17 +1,64 @@
 # Password generator
 
-This is a simple password-generating site designed to offer more random passwords than the mainstream password generators currently available.
+This password generator is a JavaScript-based password generator designed for simplicity, security, and flexibility.  
+Unlike typical password generators, it empowers you to include a wide range of Unicode characters in your passwords.  
+This tool runs directly on your local machine, ensuring your data's privacy and security. Create strong and unique passwords effortlessly to enhance your online security.
 
-## Why JavaScript?
+## Features
 
-There are several reasons for choosing to use JS to generate passwords with. One is that the generation is done locally and so it doesn't have to be transmitted over the web or handled at all by the webserver.  
-This is great news if you want to make sure the webhost can't store the generated passwords from the site.
+### Client-side generator
 
-## What is Unicode and why use it?
+As this project is only written in vanilla javascript, all code execution is done on the client device. This means that the password is never sent over the Internet.  
 
-Unicode is a industry standard for encoding of characters. Basically all characters are implemented in the Unicode standard. This allows for far more random passwords as the selection is far greater than a normal English langauge, _(a-Z 0-9)_, password.
+For those curios on how the code is written, here's the relevant password-creation code along with comments:
 
-The `Unicode characters` checkbox allows the script to choose one of the non-ASCII characters between U+161 and U+9999.<br>
-_(Note that this is not all possible Unicode characters as there currently are over 120K characters.)_
+```JS
+document.getElementById('generate').addEventListener('click', () => {
+    const availableChars = getAvailableChars(); // Fetch array of all allowed characters
+    const maxLength = document.getElementById('length').value; // Fetch int of desired password length
 
-The downside of using the such characters is that some sites with bad password-storing-implementation might not accept the password or might break the password while storing it.
+    const passwordArray = [];
+    for (let i = 0; i < maxLength; i++) { // Continue to add characters until desired password length is reached
+        const typeIndex = getRandomInt(0, availableChars.length - 1); // Pick random allowed character type
+        const [min, max] = getRandomRange(availableChars[typeIndex]); // Pick random character corresponding to the desired character type
+        passwordArray.push(String.fromCharCode(getRandomInt(min, max))); // Add character to password string
+    }
+
+    document.getElementById('password').value = passwordArray.join(''); // Change value of 'password'-element in DOM to the new password
+});
+```
+
+## Options
+
+Here is a list of all the character options available on the website:
+
+* **Lowercase characters**  
+  This option adds a-z as available characters.
+
+* **Uppercase characters**  
+This option adds A-Z as available characters.
+
+* **Numbers**  
+This option adds 0-9 as available characters.
+
+* **Special characters**  
+The option adds characters such as !, @ and ?. These are often required in strict password policies.
+
+* **Unicode characters**  
+Whilst every character is technically a unicode character, in this case Unicode characters means any character outside the normal A-Z 0-9 and aforementioned special characters.  
+These characters can be things like emojis, non-english characters like Æ, Ü, 漢, Г or Š but can also be parts of a letter or even blank letters. As such, these types of characters have to be copy-pasted and can't be written on a normal keyboard.
+
+* **Spaces**  
+This option adds blank spaces as available characters for the password generator. Blank spaces can be useful for creating good passwords but older authentication systems sometimes disallow the usage of spaces.
+
+## Deployment
+
+Whilst the project can be hosted on any web server as-is, [carlgo11.pw](https://carlgo11.pw/) performs HTML, CSS and JS minification before deploying to production.  
+The following code is run at build-time:
+
+```shell
+npm i html-minifier uglify-js &&
+npx html-minifier --collapse-whitespace --remove-comments --remove-script-type-attributes -o index.html index.html &&
+npx html-minifier --collapse-whitespace --remove-comments --remove-script-type-attributes -o css/main.css css/main.css &&
+npx uglify-js js/main.js -o js/main.js
+```
